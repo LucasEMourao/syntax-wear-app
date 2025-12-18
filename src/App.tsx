@@ -1,7 +1,12 @@
+import { Header } from "./components/Header"
+
 function App() {
-  return <>
-    <p className="text-error">Hello World</p>
-  </>;
+
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
-export default App;
+export default App
