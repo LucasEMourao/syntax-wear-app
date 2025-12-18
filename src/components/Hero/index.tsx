@@ -1,3 +1,4 @@
+import { Button } from "../Button";
 import Banner from "@/assets/images/banner.jpg";
 
 export const Hero = () => {
@@ -20,8 +21,8 @@ export const Hero = () => {
             </h1>
 
             <div className="flex gap-3.5">
-              <button>Ver Modelos</button>
-              <button>Comprar</button>
+              <Button variant="secondary" >Ver Modelos</Button>
+              <Button>Comprar</Button>
             </div>
           </div>
         </div>
