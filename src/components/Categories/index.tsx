@@ -13,7 +13,7 @@ const categories = [
 
 export const Categories = () => {
   return (
-    <section className="container flex gap-2.5 lg:grid grid-cols-4 lg:gap-4 mb-10 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+    <section className="container flex gap-2.5 lg:grid grid-cols-4 lg:gap-6 mb-10 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
       {categories.map((category, index) => (
         <div
           key={index}
