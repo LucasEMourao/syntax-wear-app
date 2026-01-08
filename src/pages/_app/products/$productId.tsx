@@ -2,17 +2,23 @@ import { createFileRoute } from "@tanstack/react-router";
 import { products } from "../../../mocks/products";
 import { Link } from "@tanstack/react-router";
 import { formatCurrency } from "../../../utils/format-currency";
+import { useContext } from "react";
+import { CartContext } from "../../../contexts/CartContext";
 
 export const Route = createFileRoute("/_app/products/$productId")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
+  const { add } = useContext(CartContext);
+
   const { productId } = Route.useParams();
 
   const filteredProduct = products.find(
     (product) => product.id === Number(productId)
   );
+
+  if (!filteredProduct) return;
 
   const originalPrice = filteredProduct?.price ?? 0;
 
@@ -58,22 +64,29 @@ function RouteComponent() {
             </span>
           </p>
 
-          <p className="max-w-[500px] my-5">
-            {filteredProduct?.description}
-          </p>
+          <p className="max-w-[500px] my-5">{filteredProduct?.description}</p>
 
           <div className="mb-6">
             <p className="text-sm">Calcular o prazo de entrega</p>
 
-            <form className="flex gap-3"> 
-                <input type="text" placeholder="Insira seu CEP" className="border border-[#c0c0c0] rounded-md p-3"/>
-            <button className="bg-black text-white py-3 px-6 rounded-md cursor-pointer hover:bg-gray-800">
+            <form className="flex gap-3">
+              <input
+                type="text"
+                placeholder="Insira seu CEP"
+                className="border border-[#c0c0c0] rounded-md p-3"
+              />
+              <button className="bg-black text-white py-3 px-6 rounded-md cursor-pointer hover:bg-gray-800">
                 Calcular
-            </button>
+              </button>
             </form>
           </div>
 
-          <button className="bg-black text-white rounded-md p-5 w-full cursor-pointer hover:bg-gray-800">Adicionar ao carrinho</button>
+          <button
+            className="bg-black text-white rounded-md p-5 w-full cursor-pointer hover:bg-gray-800"
+            onClick={()=>add(filteredProduct)}
+          >
+            Adicionar ao carrinho
+          </button>
         </div>
       </div>
     </section>
