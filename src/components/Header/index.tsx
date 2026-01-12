@@ -16,7 +16,7 @@ export const Header = () => {
           <nav className="hidden md:block">
             <ul className="flex gap-10">
               <li>
-                <Link to="/our-stores">Masculino</Link>
+                <a href="#">Masculino</a>
               </li>
               <li>
                 <a href="#">Feminino</a>
@@ -30,10 +30,10 @@ export const Header = () => {
           <nav>
             <ul className="flex gap-4 md:gap-10">
               <li className="hidden md:block">
-                <a href="#">Nossas Lojas</a>
+                <Link to="/our-stores">Nossas Lojas</Link>
               </li>
               <li className="hidden md:block">
-                <a href="#">Sobre</a>
+                <Link to="/about">Sobre</Link>
               </li>
               <li>
                 <Link to="/sign-in">
