@@ -28,7 +28,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <h3 className="text-lg font-semibold">{product.name}</h3>
         <p>{product.color}</p>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-2.5">
           <p className="font-bold">R${product.price},00</p>
 
           <button className="cursor-pointer" onClick={() => add(product)}>
