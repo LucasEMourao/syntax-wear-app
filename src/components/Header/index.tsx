@@ -49,7 +49,7 @@ export const Header = () => {
               </li>
 
               <li className="hidden lg:block">
-                <Link to="/sign-in">
+                <Link to="/sign-up">
                   <img src={IconUser} alt="Ícone de login" />
                 </Link>
               </li>

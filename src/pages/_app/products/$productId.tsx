@@ -8,6 +8,17 @@ import { CEPForm } from "../../../components/CEPForm";
 
 export const Route = createFileRoute("/_app/products/$productId")({
   component: RouteComponent,
+  head: ({ params }) => {
+    const filteredProduct = products.find(
+      (product) => product.id === Number(params.productId)
+    );
+
+    const title = filteredProduct
+      ? `${filteredProduct.name} - Produtos - Syntax Wear`
+      : "Produto não encontrado - Produtos - Syntax Wear";
+
+    return { meta: [{ title }] };
+  },
 });
 
 function RouteComponent() {
@@ -27,7 +38,12 @@ function RouteComponent() {
           O produto que voce está procurando não exite ou foi removido.
         </p>
 
-        <Link to="/products" className="text-accent hover:text-accent-hover underline">Voltar para os produtos</Link>
+        <Link
+          to="/products"
+          className="text-accent hover:text-accent-hover underline"
+        >
+          Voltar para os produtos
+        </Link>
       </section>
     );
 

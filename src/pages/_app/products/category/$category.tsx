@@ -5,6 +5,13 @@ import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_app/products/category/$category")({
   component: RouteComponent,
+  head: () => ({
+    meta: [
+      {
+        title: "Produtos - Syntax Wear",
+      },
+    ],
+  }),
 });
 
 function RouteComponent() {
