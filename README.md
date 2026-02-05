@@ -10,7 +10,7 @@ This repository contains the source code for **Syntax Wear**, a modern Front-end
 - **Aplicação Online (Vercel):** [https://syntax-wear-app-zeta.vercel.app](https://syntax-wear-app-zeta.vercel.app)
 - **Repositório da API (Backend):** [https://github.com/LucasEMourao/syntax-wear-api](https://github.com/LucasEMourao/syntax-wear-api)
 
-[🇧🇷 Versão em Português abaixo](#-versão-em-português)
+- 🇧🇷 [Versão em Português](#-versão-em-português)
 
 ## 🚀 Technologies Used
 
