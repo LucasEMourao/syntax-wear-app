@@ -110,7 +110,7 @@ Developed with 💙 by [LucasEMourão](https://github.com/LucasEMourao)
 
 # Syntax Wear E-commerce
 
-!Syntax Wear Banner
+![Syntax Wear Banner](src/assets/images/about.jpg)
 
 > **Syntax Wear**: Onde estilo, conforto e durabilidade se encontram.
 
