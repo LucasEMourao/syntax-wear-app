@@ -3,7 +3,7 @@ import { products } from "../../../mocks/products";
 import { Link } from "@tanstack/react-router";
 import { formatCurrency } from "../../../utils/format-currency";
 import { useContext } from "react";
-import { CartContext } from "../../../contexts/CartContext";
+import { CartContext } from "../../../contexts/CartContext/CartContext";
 import { CEPForm } from "../../../components/CEPForm";
 
 export const Route = createFileRoute("/_app/products/$productId")({
